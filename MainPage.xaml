@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PhoneAuthentication.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <VerticalStackLayout x:Name="pnlMobileInfo">
+                <Label Text="Enter Your Phone Number" FontSize="28" />
+                <Entry x:Name="txtMobileNo"  />
+                <Button
+                x:Name="btnSubmit"
+                Text="Submit"
+                Clicked="btnSubmit_Clicked"
+                HorizontalOptions="Center" />
+            </VerticalStackLayout>
+
+            <VerticalStackLayout IsVisible="False" x:Name="pnlMobileVerification">
+                <Label Text="Enter Verification Code" FontSize="28" />
+
+                <Entry x:Name="txtCode"  />
+                <Button
+                x:Name="btnVerifyCode"
+                Text="Verify"
+                 Clicked="btnVerifyCode_Clicked"   
+                HorizontalOptions="Center" />
+            </VerticalStackLayout>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
